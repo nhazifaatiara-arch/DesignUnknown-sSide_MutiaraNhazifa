@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unknown's Side - Adventure Okeyzzz</title>
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32/1e88e5/ffffff?text=A">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS UTAMA */
+        /* --- General Styling & Smooth Scroll --- */
+        html {
+            scroll-behavior: smooth; /* ✅ 1. SMOOTH SCROLL */
+        }
+        body {
+            font-family: 'Poppins', sans-serif; /* ✅ 4. FONT POPPINS */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; 
+        }
+        
+        /* --- Header & Navigasi --- */
+        header {
+            background-color: rgb(58, 165, 215);
+            text-align: center;
+            padding: 15px 0;
+            color: white;
+        }
+        nav{
+            background-color: rgb(23, 70, 115);
+            text-align: center;
+            padding: 10px;
+            position: sticky; /* ✅ 2. STICKY NAV */
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            text-decoration: none;
+            color: white; 
+            margin: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        nav a:hover{
+            text-decoration: underline;
+            color: #ffd700; /* Kuning Emas */
+            font-weight: 700;
+        } 
+        
+        /* --- Hero Section --- */
+        .hero{
+            text-align: center;
+            padding: 50px 0;
+            height: 400px;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url("https://awsimages.detik.net.id/community/media/visual/2023/02/08/gambar-pemandangan-5.jpeg?w=1280") 
+                        no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+        .hero h1 {
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* --- Layout Container --- */
+        .container{
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        /* --- Layanan Section --- */
+        .services{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service{
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); 
+            border: 2px solid #e0e0e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .service h3{
+           color: #667eea; 
+           font-size: 1.5rem;
+           margin-bottom: 1rem;
+        }
+        .service p{
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* --- Form Kontak Styling --- */
+        #kontak form {
+            background-color: #e3f2fd; /* Biru muda sangat terang */
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #90caf9;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        #kontak form h2 {
+            color: #1e88e5; 
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #kontak input, #kontak textarea{
+            width: 95%; 
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #bbdefb;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        #kontak input:focus, #kontak textarea:focus {
+            border-color: #42a5f5; 
+            outline: none;
+        }
+        #kontak button{
+            background-color: #1e88e5; 
+            color: white; 
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            width: 95%;
+            margin: 15px auto 0;
+            transition: background-color 0.3s;
+        }
+        #kontak button:hover{
+            background-color: #0d47a1; 
+            color: white;
+        }
+        
+        /* --- Footer --- */
+        footer{
+            text-align: center;
+            background: #263238; 
+            color: #cfd8dc;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+        /* --- Media Queries Dasar untuk Responsivitas --- */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%; 
+            }
+            .services {
+                flex-direction: column; 
+            }
+            .hero {
+                font-size: 20px;
+                height: 250px;
+            }
+            nav a {
+                margin: 5px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="Kembali">
+        <h1>Selamat Datang di Unknown's side</h1>
+        <P style="font-weight: 600;">"Selamat Bertemu di Sisi yang Jarang Dibicarakan Dunia, Mentalmu Sudah Update? Petualangan Ini Versi Paling Baru Karena Bukan Sekedar Traveling, Ini Ujian Lisensi Nyali"</P> 
+    </header>
+    <nav>
+        <a href="#Kembali">Kembali</a> 
+        <a href="#beranda">beranda</a>
+        <a href="#layanan">layanan</a>
+        <a href="#about">About </a>
+        <a href="#review">review</a>
+        <a href="#harga">price</a> <a href="#kontak">kontak</a>
+    </nav>
+    
+    <section class="hero" id="beranda">
+        <h1>SELAMAT DATANG DI UNKNOWN'S SIDE</h1>
+    </section>
+
+    <section class="container" id="layanan">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">layanan kami</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Tempat Alam Kita</h3> <p>menyediakan banyak permainan menguji adrenalin</p>
+            </div>
+            <div class="service">
+                <h3>tempat paralayang</h3>
+                <p>dengan pengalaman menarik</p>
+            </div>
+            <div class="service">
+                <h3>tempat rock climb</h3>
+                <p>dengan pengujian adrenalin yang paling menguji</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="about" style="background-color: #e3f2fd; color: #333; padding: 4rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #1e88e5;">Tentang Kami</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+                Unknown's Side adalah komunitas petualang yang mengeksplorasi keindahan alam 
+                melalui aktivitas outdoor yang menantang.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-top: 5px solid #42a5f5;">
+                    <h4 style="color: #42a5f5; margin-bottom: 0.5rem; font-size: 1.3rem;">🧗 Rock Climbing</h4>
+                    <p>Panjat tebing dengan teknik profesional</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-top: 5px solid #42a5f5;">
+                    <h4 style="color: #42a5f5; margin-bottom: 0.5rem; font-size: 1.3rem;">🌊 Canyoneering</h4>
+                    <p>Jelajahi ngarai dengan hiking dan rappelling</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-top: 5px solid #42a5f5;">
+                    <h4 style="color: #42a5f5; margin-bottom: 0.5rem; font-size: 1.3rem;">⛰️ Mountain Hiking</h4>
+                    <p>Pendakian gunung bersama tim berpengalaman</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-top: 5px solid #42a5f5;">
+                    <h4 style="color: #42a5f5; margin-bottom: 0.5rem; font-size: 1.3rem;">🏕️ Camping</h4>
+                    <p>Bermalam di alam terbuka</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="review" style="background-color: #f0f8ff; padding: 4rem 0;"> 
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #333;">Apa Kata Mereka</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">
+                Pengalaman petualang yang telah bergabung bersama kami
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div style="color: #ffd700; font-size: 1.5rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+                    <p style="color: #555; margin-bottom: 1rem; font-style: italic;">
+                        "Pengalaman canyoneering yang luar biasa! Guide sangat profesional dan sabar membimbing kami. Pemandangannya spektakuler!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">A</div>
+                        <div>
+                            <strong style="color: #333;">Andi Pratama</strong>
+                            <p style="color: #999; font-size: 0.9rem;">Canyoneering - Juli 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div style="color: #ffd700; font-size: 1.5rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+                    <p style="color: #555; margin-bottom: 1rem; font-style: italic;">
+                        "Rock climbing pertama saya dan tim Unknown's Side membuat saya jatuh cinta! Sangat recommended untuk pemula."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">S</div>
+                        <div>
+                            <strong style="color: #333;">Siti Nurhaliza</strong>
+                            <p style="color: #999; font-size: 0.9rem;">Rock Climbing - Agustus 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div style="color: #ffd700; font-size: 1.5rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+                    <p style="color: #555; margin-bottom: 1rem; font-style: italic;">
+                        "Trip camping dan hiking ke gunung bersama Unknown's Side adalah pengalaman yang tak terlupakan. Pasti balik lagi!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">R</div>
+                        <div>
+                            <strong style="color: #333;">Rudi Hermawan</strong>
+                            <p style="color: #999; font-size: 0.9rem;">Mountain Hiking - September 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="harga" style="background: linear-gradient(135deg, #0d47a1 0%, #42a5f5 100%); padding: 4rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: white;">Paket & Harga</h2>
+            <p style="text-align: center; color: #e3f2fd; margin-bottom: 3rem;">
+                Pilih paket petualangan yang sesuai dengan kebutuhan Anda
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                
+                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; transition: transform 0.3s;">
+                    <div style="background-color: #bbdefb; color: #0d47a1; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                        <h3 style="margin: 0; font-size: 1.5rem;">luar "biasa"</h3>
+                    </div>
+                    <div style="font-size: 2.5rem; color: #1e88e5; font-weight: bold; margin-bottom: 0.5rem;">Rp 350K</div>
+                    <p style="color: #999; margin-bottom: 2rem;">per orang</p>
+                    <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 2rem; font-size: 0.95rem;">
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Rock Climbing (Half Day)</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Peralatan Lengkap</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Instruktur Profesional</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Sertifikat</li>
+                        <li style="padding: 0.5rem 0; color: #ccc;">❌ Makan</li>
+                        <li style="padding: 0.5rem 0; color: #ccc;">❌ Dokumentasi</li>
+                    </ul>
+                    <button style="background-color: #1e88e5; color: white; padding: 1rem 2rem; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-size: 1rem; font-weight: bold; transition: background-color 0.3s;"
+                            onmouseover="this.style.backgroundColor='#0d47a1'" onmouseout="this.style.backgroundColor='#1e88e5'">Gaskeun Sekarang!</button>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transform: scale(1.05);">
+                    <div style="position: absolute; top: -15px; right: 20px; background: #ffd700; color: #333; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">POPULAR</div>
+                    <div style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); color: #333; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                        <h3 style="margin: 0; font-size: 1.5rem;">teriak "my trip my adventure"</h3>
+                    </div>
+                    <div style="font-size: 2.5rem; color: #1e88e5; font-weight: bold; margin-bottom: 0.5rem;">Rp 750K</div>
+                    <p style="color: #999; margin-bottom: 2rem;">per orang</p>
+                    <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 2rem; font-size: 0.95rem;">
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Canyoneering (Full Day)</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Peralatan Lengkap</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Instruktur Profesional</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Sertifikat</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Makan Siang</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Dokumentasi Foto</li>
+                    </ul>
+                    <button style="background-color: #ffd700; color: #333; padding: 1rem 2rem; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-size: 1rem; font-weight: bold; transition: background-color 0.3s;"
+                            onmouseover="this.style.backgroundColor='#ffe082'" onmouseout="this.style.backgroundColor='#ffd700'">Cekidot 🔥</button>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center;">
+                    <div style="background-color: #bbdefb; color: #0d47a1; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                        <h3 style="margin: 0; font-size: 1.5rem;">versi lebih mehong</h3>
+                    </div>
+                    <div style="font-size: 2.5rem; color: #1e88e5; font-weight: bold; margin-bottom: 0.5rem;">Rp 1.5JT</div>
+                    <p style="color: #999; margin-bottom: 2rem;">per orang</p>
+                    <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 2rem; font-size: 0.95rem;">
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Mountain Hiking </li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Peralatan Lengkap</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Instruktur Profesional</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Sertifikat</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Full Board Meals</li>
+                        <li style="padding: 0.5rem 0; color: #555;">✅ Dokumentasi Foto & Video</li>
+                    </ul>
+                    <button style="background-color: #1e88e5; color: white; padding: 1rem 2rem; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-size: 1rem; font-weight: bold; transition: background-color 0.3s;"
+                            onmouseover="this.style.backgroundColor='#0d47a1'" onmouseout="this.style.backgroundColor='#1e88e5'">Nge-Camp Kuy!</button>
+                </div>
+
+            </div>
+
+            <p style="text-align: center; color: white; margin-top: 3rem; font-size: 0.9rem;">
+                * Harga dapat berubah sekarang,semenit lagi,sepuluh menit lagi, jadi jangan ragu jangan bimbang gaskeun zeyenk.
+            </p>
+        </div>
+    </section>
+
+    <section class="container" id="kontak" style="background-color: #f0f8ff; padding: 4rem 0;"> 
+        <h2 style= "text-align: center; color: #1e88e5; font-size: 2.5rem; margin-bottom: 3rem;"> Tertarik? Langsung Saja</h2>
+        <form action="">
+            <h2>Tanya-tanya Dulu, Gas sekarang! 🤙</h2>
+            <label> Nama </label>
+            <input type="text" placeholder="masukkan nama anda" required/>
+            <label> email </label>
+            <input type="email" placeholder="masukkan email anda" required/>
+            <label> pesan </label>
+            <textarea rows="5" placeholder="Yuk, ketik pertanyaan kamu di sini. Jangan malu-malu!"></textarea>
+            <button type="submit">DM Kami tenang gak akan dikacangin, dan gak bakal jadi last chat, kalo sama aku🙊🙊</button>
+        </form>
+    </section>
+
+    
+    <footer>
+        <p>&copy; copyright ©2024 Unknown's Side</p>
+    </footer>
+    <nav>
+        <a href="#Kembali">Kembali</a> 
+    </nav>
+</body>
+</html>
